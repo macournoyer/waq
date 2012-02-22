@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font: 200% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+      text-align: center;
+      background: red;
+      color: white;
+    }
+    #main {
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+  </style>
+  <script src="jquery.js"></script>
+  <script>
+    $(function() {
+      (function() {
+        var start = arguments.callee;
+        $("h1").css("visibility", "hidden");
+        setTimeout(function() {
+          $("h1").css("visibility", "");
+          setTimeout(start, 800);
+        }, 400);
+      })();
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <h1>LES INTERNETS SONT HORS SERVICE POUR UNE DUR&Eacute;E IND&Eacute;TERMIN&Eacute;E</h1>
+    <p>Merci de votre patience.</p>
+    <p><em>- Le gestionnaire supr&ecirc;me des Internets</em></p>
+  </div>
+</body>
+</html>
